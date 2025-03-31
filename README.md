@@ -1,4 +1,4 @@
-# FastAPI User Management API
+# FastAPI Application for CRUD operations
 
 ## Overview
 This project is a RESTful API built using FastAPI for managing users. It provides CRUD operations (Create, Read, Update, Delete) for user data and follows best practices for system design and scalability.
@@ -47,14 +47,6 @@ This project is a RESTful API built using FastAPI for managing users. It provide
    ```env
    DATABASE_URL=postgresql://user:password@localhost/db_name
    ```
-5. **Apply Migrations**
-   ```bash
-   alembic upgrade head
-   ```
-6. **Run the Server**
-   ```bash
-   uvicorn main:app --reload
-   ```
 
 ## API Endpoints
 | Method | Endpoint         | Description          |
@@ -65,10 +57,23 @@ This project is a RESTful API built using FastAPI for managing users. It provide
 | PUT    | `/users    `   | Update user         |
 | DELETE | `/users    `   | Delete user         |
 
-## Testing the API
-Use **Postman** or **cURL** to test endpoints.
+## Run the app
+There are multiple options available when running the app.
+The way you're likely going to want to do it is by running the command
 ```bash
-curl -X GET http://127.0.0.1:8000/users/1
+uvicorn main:app --reload
+```
+If you would like to choose a specific port (if 8000 is already occupied by another program), then you can run
+```bash
+uvicorn main:app --reload --port <PORT>
+```
+where the `<PORT>` is a number of your choosing.
+For the rest of the options when running a uvicorn app, visit https://www.uvicorn.org/#command-line-options.
+
+## Testing the API
+Use **FastAPI-Swagger UI** to test endpoints.
+```bash
+http://127.0.0.1:8000/docs#
 ```
 
 ## Contributing
