@@ -29,8 +29,8 @@ This project is a RESTful API built using FastAPI for managing users. It provide
 ### Setup
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/fastapi-user-management.git
-   cd fastapi-user-management
+   git clone https://github.com/Debmalya8145/fastapi-CRUD-app-1.git
+   cd fastapi-CRUD-app-1
    ```
 2. **Create a Virtual Environment**
    ```bash
